@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Trang chủ quản lý - Bộ môn Cơ khí</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          primary: "#0ea5e9",
+          "primary-hover": "#0284c7",
+          "background-light": "#f3f4f6",
+          "background-dark": "#111827",
+          "card-light": "#ffffff",
+          "card-dark": "#1f2937",
+          "text-light": "#1f2937",
+          "text-dark": "#f9fafb",
+        },
+        fontFamily: {
+          display: ["Roboto", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  .grid-item {
+    transition: all 0.3s ease;
+  }
+  .grid-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
+                0 4px 6px -2px rgba(0,0,0,0.05);
+  }
+</style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display min-h-screen flex flex-col text-text-light dark:text-text-dark">
+
+<header class="relative w-full bg-gradient-to-r from-blue-800 to-primary text-white shadow-lg overflow-hidden">
+  <div class="absolute inset-0 opacity-20">
+    <svg class="h-full w-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+      <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white"></path>
+    </svg>
+  </div>
+
+  <!-- THỜI GIAN THỰC -->
+  <div class="relative z-10 flex justify-between items-center px-4 py-2 bg-black/20 text-sm font-mono border-b border-white/10">
+    <div class="flex items-center gap-2">
+      <span class="material-icons text-base">schedule</span>
+      <span id="time-display"></span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="material-icons text-base">calendar_today</span>
+      <span id="date-display"></span>
+    </div>
+  </div>
+
+  <div class="relative z-10 container mx-auto px-6 py-12 text-center">
+    <h2 class="text-lg md:text-xl font-medium opacity-90 mb-2">
+      TRƯỜNG CAO ĐẲNG LONG AN - CƠ SỞ ĐỨC HÒA
+    </h2>
+    <h1 class="text-3xl md:text-5xl font-bold uppercase mb-4">
+      Liên Kết Công Việc <br class="hidden md:block"/> Bộ Môn Cơ Khí
+    </h1>
+    <div class="w-24 h-1 bg-white mx-auto rounded-full"></div>
+  </div>
+
+  <div class="absolute bottom-2 right-4 text-xs opacity-60">Version 12.25</div>
+</header>
+
+<main class="flex-grow container mx-auto px-4 py-8 md:py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-red-500 hover:bg-red-50 dark:hover:bg-red-900/20" href="#">
+<span class="material-icons text-4xl text-red-500 mb-3">person_outline</span>
+<h3 class="text-lg font-bold text-red-600 text-center uppercase">Tiến độ - Giảng viên</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-red-700 hover:bg-red-50 dark:hover:bg-red-900/20" href="#">
+<span class="material-icons text-4xl text-red-800 mb-3">language</span>
+<h3 class="text-lg font-bold text-red-800 text-center uppercase">Web CĐ Long An</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-red-800 hover:bg-red-50 dark:hover:bg-red-900/20" href="#">
+<span class="material-icons text-4xl text-red-900 mb-3">lock_person</span>
+<h3 class="text-lg font-bold text-red-900 text-center">
+<span class="block uppercase">Đăng nhập</span>
+<span class="text-sm font-normal text-gray-600">Nhập điểm trên WEB</span>
+</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-red-800 hover:bg-red-50 dark:hover:bg-red-900/20" href="#">
+<span class="material-icons text-4xl text-red-900 mb-3">mail_outline</span>
+<h3 class="text-lg font-bold text-red-900 text-center uppercase">Hộp thư góp ý<br/>Bộ môn cơ khí</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-red-800 hover:bg-red-50 dark:hover:bg-red-900/20" href="#">
+<span class="material-icons text-4xl text-red-900 mb-3">assignment_ind</span>
+<h3 class="text-lg font-bold text-red-900 text-center uppercase">Nhiệm vụ<br/>Trưởng - Phó BMCK</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-green-600 hover:bg-green-50 dark:hover:bg-green-900/20" href="#">
+<span class="material-icons text-4xl text-green-600 mb-3">calendar_month</span>
+<h3 class="text-lg font-bold text-green-700 text-center uppercase">Thời khóa biểu</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-green-600 hover:bg-green-50 dark:hover:bg-green-900/20" href="#">
+<span class="material-icons text-4xl text-green-600 mb-3">fact_check</span>
+<h3 class="text-lg font-bold text-green-700 text-center uppercase">Kế hoạch giáo viên</h3>
+</a>
+
+<!-- PHIẾU ĐIỂM – LIÊN KẾT GOOGLE -->
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-green-600 hover:bg-green-50 dark:hover:bg-green-900/20"
+   href="https://drive.google.com/drive/folders/1csXvguAUp_r_wcoLQZppTGEuC-72jWqY"
+   target="_blank"
+   rel="noopener noreferrer">
+<span class="material-icons text-4xl text-green-600 mb-3">score</span>
+<h3 class="text-lg font-bold text-green-700 text-center uppercase">Phiếu điểm</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-green-600 hover:bg-green-50 dark:hover:bg-green-900/20" href="#">
+<span class="material-icons text-4xl text-green-600 mb-3">folder_shared</span>
+<h3 class="text-lg font-bold text-green-700 text-center uppercase">Tiến độ<br/>Hồ sơ sổ sách</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-green-600 hover:bg-green-50 dark:hover:bg-green-900/20" href="#">
+<span class="material-icons text-4xl text-green-600 mb-3">description</span>
+<h3 class="text-lg font-bold text-green-700 text-center uppercase">Văn bản - Mẫu<br/>Thông tư</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20" href="#">
+<span class="material-icons text-4xl text-blue-600 mb-3">school</span>
+<h3 class="text-lg font-bold text-blue-700 text-center uppercase">Học sinh - Sinh viên</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20" href="#">
+<span class="material-icons text-4xl text-blue-600 mb-3">event_note</span>
+<h3 class="text-lg font-bold text-blue-700 text-center uppercase">Các kế hoạch thi</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20" href="#">
+<span class="material-icons text-4xl text-blue-600 mb-3">handshake</span>
+<h3 class="text-lg font-bold text-blue-700 text-center uppercase">Hợp đồng</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20" href="#">
+<span class="material-icons text-4xl text-blue-600 mb-3">inventory_2</span>
+<h3 class="text-lg font-bold text-blue-700 text-center uppercase">Tài sản CCDC<br/>BMCK</h3>
+</a>
+
+<a class="grid-item group flex flex-col items-center justify-center p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-md border-l-4 border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20" href="#">
+<span class="material-icons text-4xl text-blue-600 mb-3">precision_manufacturing</span>
+<h3 class="text-lg font-bold text-blue-700 text-center uppercase">Báo cáo<br/>Máy móc thiết bị</h3>
+</a>
+
+</div>
+</main>
+
+<footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-6">
+<div class="container mx-auto px-4 text-center text-sm text-gray-500">
+<p>© 2025 Trường Cao Đẳng Long An. All rights reserved.</p>
+<p class="mt-1">Hệ thống quản lý nội bộ - Bộ môn Cơ khí</p>
+</div>
+</footer>
+
+<!-- SCRIPT THỜI GIAN THỰC -->
+<script>
+function updateDateTime() {
+  const now = new Date();
+  document.getElementById("time-display").textContent =
+    now.toLocaleTimeString("vi-VN", { hour12: false });
+  document.getElementById("date-display").textContent =
+    now.toLocaleDateString("vi-VN");
+}
+updateDateTime();
+setInterval(updateDateTime, 1000);
+</script>
+
+</body>
+</html>
